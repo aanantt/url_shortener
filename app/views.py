@@ -22,8 +22,6 @@ def home(request):
 
 
 def shorturl(request, surl):
-    print(surl)
-    surl1 = f"https://shortlinkproject.herokuapp.com/{surl}"
-    print(surl1)
-    q = ShortURL.objects.get(short_url=surl1)
+    url = f"https://shortlinkproject.herokuapp.com/{surl}"
+    q = ShortURL.objects.get(short_url=url)
     return redirect(q.main_url)
