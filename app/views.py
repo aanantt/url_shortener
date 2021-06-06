@@ -10,7 +10,7 @@ def home(request):
         print(request.POST.get('url'))
         url = request.POST.get('url')
         key_word = request.POST.get('surl')
-        short_url = f"http://127.0.0.1:8000/{key_word}"
+        short_url = f"https://shortlinkproject.herokuapp.com/{key_word}"
         ShortURL(main_url=url, short_url=short_url).save()
         context = {
             'url': short_url,
