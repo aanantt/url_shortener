@@ -22,5 +22,5 @@ python manage.py runserver
 ```
 
 ## Website
-[Click Here](https://github.com/aanantt/url_shortener.git)
+[Click Here](https://shortlinkproject.herokuapp.com/)
 
