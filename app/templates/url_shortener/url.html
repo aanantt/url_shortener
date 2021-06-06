@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{surl}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="container p-4" style="text-align:center;">
+    <h3>Your Short URL</h3>
+    <div class="colorDiv" >
+        <h3 class="colorCode" id="p1">{{url}}</h3>
+        <div style="opacity:0">
+            <input type="text" id="copyText"/>
+        </div>
+    </div>
+    <button class="btn btn-primary mt-1 " id="firstColorObject" type="submit">Copy
+        link
+    </button>
+    <script>
+        document.querySelector("#firstColorObject").addEventListener("click", function () {
+
+            var p1 = document.getElementById("p1");
+
+            // set "#Color 1" with the hidden field so that you can call select on it
+            var hiddenField = document.getElementById("copyText");
+            hiddenField.value = p1.innerHTML;
+            hiddenField.select();
+            document.execCommand("copy");
+
+            alert("Copied the text: " + hiddenField.value);
+
+        }, false);
+
+    </script>
+</div>
+</body>
+</html>

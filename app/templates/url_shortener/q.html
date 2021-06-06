@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container p-4 card"  style = "text-align:center;">
+    <h3>Create short URLs dot com</h3>
+    <form action="{% url 'name' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name='url' class="form-control form-control-lg" id="usr"  placeholder="URL">
+            <input type="text" name='surl' class="form-control form-control-lg mt-4"   placeholder="Write any word for above URL">
+        </div>
+        <button type="submit" style = "text-align:center;" class="btn btn-outline-primary">Create!!!</button>
+
+    </form>
+</div>
+
+</body>
+</html>
